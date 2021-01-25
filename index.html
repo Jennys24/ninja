@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OOP Ninja</title>
+</head>
+<body>
+
+
+    <script>
+
+
+      class Ninja {
+        
+        constructor(nombre, salud, velocidad=3, fuerza=3) {
+          // acá recibo los atributos
+          this.nombre = nombre;
+          this.salud = salud;
+          this.velocidad = velocidad;
+          this.fuerza = fuerza;
+        }
+        // acá escribo los métodos
+        // 1. agrega un método: sayName () - Esto debería registrar el nombre de Ninja en la consola
+        sayName() {
+          console.log(this.nombre); 
+        }
+
+        //2.agrega un método: showStats () - Esto debería mostrar el nombre, la fuerza, la velocidad y la salud del Ninja.
+        showStats() {
+          console.log(`Nombre: ${this.nombre}
+                      Salud: ${this.salud}
+                      Velocidad: ${this.velocidad}
+                      fuerza: ${this.fuerza}`);
+        }
+        //3.agrega un método: drinkSake () - Esto debería agregar +10 de salud al Ninja
+        drinkSake() {
+          this.salud += 10;
+        }
+      }
+      
+      const ninja1 = new Ninja("Hyabusa",20,5,2);
+      const ninja2 = new Ninja("Kauasaky",23);
+      const ninja3 = new Ninja("Moltronky",50, 7);
+      
+
+    </script>
+</body>
+</html>
