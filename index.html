@@ -43,6 +43,21 @@
       const ninja2 = new Ninja("Kauasaky",23);
       const ninja3 = new Ninja("Moltronky",50, 7);
       
+      class Sensei extends Ninja {
+        constructor(nombre, salud=200, velocidad=10, fuerza=10, sabiduria=10) {
+          super(nombre, salud, velocidad, fuerza);
+          this.sabiduria = sabiduria;
+        }
+        speakWisdom(){
+          console.log("Después de la tormenta, viene la calma");
+          super.drinkSake();
+        }
+
+      }
+
+      const sensei1 = new Sensei("Master Splinter");
+      const sensei2 = new Sensei("Master Borou");
+
 
     </script>
 </body>
